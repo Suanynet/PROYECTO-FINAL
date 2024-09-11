@@ -1,0 +1,30 @@
+.register{
+    width: 400px;
+    background-color: black;
+    padding: 30px;
+    border-radius: 10px;
+    font-family: 'calibri';
+    color: lightblue ;
+    box-shadow: 7px 13px 37px rgb(65, 62, 62);
+}
+
+.register{
+    margin-left: 400px;
+    text-align: center;
+}
+.Linput{
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.botonn{
+    border: none;
+    color: black;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 5px; 
+}
+.registrar{background-color: white}
+.registrar:hover {background: lightblue}

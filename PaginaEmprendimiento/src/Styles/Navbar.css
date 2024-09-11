@@ -1,0 +1,15 @@
+.NLinks{
+    display: grid;
+    grid-template-columns: 100px 100px 150px 150px;
+    background-color: #8FBE92;
+    position: relative;
+    bottom: 550px;
+    right: 6px;
+    inline-size: 1363px;
+    justify-content: end;
+}
+
+.links{
+    text-decoration: none;
+    color: rgb(39, 39, 39);
+}

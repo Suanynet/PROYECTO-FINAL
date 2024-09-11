@@ -1,0 +1,17 @@
+.logo{
+    width: auto;
+    height: 210px;
+    background-color:#8FBE92;
+    margin: 0;
+    position: relative;
+    bottom: 10px;
+    resize: 6px;
+    inline-size: 1363px;
+    margin-bottom: 500px;
+}
+
+.texto{
+    text-align: center;
+    font-size: 50px;
+    color: rgb(39, 39, 39);
+}

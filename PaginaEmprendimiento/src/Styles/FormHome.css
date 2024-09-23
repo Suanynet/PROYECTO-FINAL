@@ -1,1 +1,35 @@
-
+ .tituloB {
+    margin-top: 200px;
+    font-size: 3rem;
+    color: rgb(46, 45, 45); /* Color vibrante */
+    text-align: center;
+    animation: fadeIn 2s ease-in-out, bounce 2s infinite;
+    text-shadow: 5px 5px 9px rgb(85, 84, 84);
+  }
+  
+  /* Animación de entrada */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Animación de rebote */
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  

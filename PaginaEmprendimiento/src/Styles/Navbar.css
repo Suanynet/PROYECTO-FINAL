@@ -1,15 +1,110 @@
-.NLinks{
-    display: grid;
-    grid-template-columns: 100px 100px 150px 150px;
-    background-color: #8FBE92;
-    position: relative;
-    bottom: 550px;
-    right: 6px;
-    inline-size: 1363px;
-    justify-content: end;
+.NLinks {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* Distribuye automáticamente las columnas */
+  background-color: #f6fff7; /* Fondo verde suave */
+  position: relative;
+  padding: 10px; /* Añadir padding */
+  justify-content: center; /* Centrar contenido */
+  height: 60px; /* Ajustar altura */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  border-radius: 10px; /* Bordes redondeados */
+  margin: 20px 0; /* Espaciado superior e inferior */
+  margin-top: -15px;
+  animation: slideIn 0.5s ease-in-out; /* Animación de deslizamiento al cargar */
 }
 
-.links{
-    text-decoration: none;
-    color: rgb(39, 39, 39);
+.links {
+  text-decoration: none; /* Sin subrayado */
+  color: #3E3E3E; /* Color de texto más oscuro */
+  text-align: center; /* Centrar texto */
+  padding: 10px; /* Añadir padding */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s, transform 0.3s, color 0.3s; /* Transiciones suaves */
+  opacity: 0; /* Inicialmente oculto para animación */
+  animation: fadeIn 0.5s ease forwards; /* Animación de aparición */
+}
+
+.cerrar {
+  background-color: #1a1a1a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 150px;
+  height: 35px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  margin-left: auto; /* Centrar botón automáticamente */
+}
+
+.cerrar:hover {
+  background-color: #127232;
+  transform: scale(1.05);
+}
+
+.cerrar:active {
+  transform: scale(0.95);
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px); /* Mover hacia abajo */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Regresar a la posición original */
+  }
+}
+
+/* Animación de deslizamiento de la barra */
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px); /* Desplazarse hacia arriba */
+    opacity: 0; /* Oculto al principio */
+  }
+  to {
+    transform: translateY(0); /* Regresar a la posición original */
+    opacity: 1; /* Visible al final */
+  }
+}
+
+.links:hover {
+  background-color: rgba(255, 255, 255, 0.3); /* Fondo blanco suave al pasar el ratón */
+  transform: scale(1.05); /* Efecto de aumento al pasar el ratón */
+  color: #1b5e20; /* Cambiar color del texto al pasar el ratón */
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .NLinks {
+    grid-template-columns: repeat(5, 1fr); /* Menos columnas en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 768px) {
+  .NLinks {
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas medianas */
+  }
+  
+  .cerrar {
+    margin-left: 20px; /* Espaciado en dispositivos medianos */
+  }
+}
+
+@media (max-width: 480px) {
+  .NLinks {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas muy pequeñas */
+  }
+
+  .cerrar {
+    width: 100%; /* Botón ocupará todo el ancho en móviles */
+    margin: 10px 0; /* Espaciado vertical en móviles */
+  }
+
+  .links {
+    padding: 8px; /* Menos padding en enlaces en móviles */
+  }
 }

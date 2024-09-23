@@ -5,12 +5,14 @@ import "../Styles/FormHome.css"
 import Navbar from '../Components/Navbar'
 
 function Home() {
+
   return (
     <div>
         <div className='link'>
-         <FormHome />
-         <Header />
-         <Navbar />
+          <Header />
+          <Navbar />
+          <FormHome />
+        
         </div>
     </div>
   )

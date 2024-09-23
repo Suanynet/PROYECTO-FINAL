@@ -1,0 +1,93 @@
+.Bebidas {
+    font-size: 40px;
+}
+
+.imagenes {
+    height: 300px;
+    width: 300px;
+}
+
+.columnas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Espacio entre columnas */
+}
+
+.cartas {
+    background-color: #215c24;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.cartas:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .Bebidas {
+        font-size: 30px; /* Ajusta el tamaño de fuente en tabletas */
+    }
+
+    .columnas {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en tabletas */
+    }
+
+    .imagenes {
+        height: 250px;
+        width: 250px; /* Ajusta el tamaño de las imágenes en tabletas */
+    }
+}
+
+@media (max-width: 768px) {
+    .Bebidas {
+        font-size: 24px; /* Ajusta el tamaño de fuente en móviles */
+    }
+
+    .columnas {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+    }
+
+    .imagenes {
+        height: 200px;
+        width: 200px; /* Ajusta el tamaño de las imágenes en móviles */
+    }
+
+    .cartas {
+        width: 100%; /* Las cartas ocupan todo el ancho disponible */
+        padding: 15px; /* Ajusta el padding para móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    .Bebidas {
+        font-size: 20px; /* Ajusta aún más el tamaño de fuente para pantallas muy pequeñas */
+    }
+
+    .imagenes {
+        height: 180px;
+        width: 180px; /* Ajusta el tamaño de las imágenes en pantallas muy pequeñas */
+    }
+
+    .cartas {
+        padding: 10px; /* Menos padding para pantallas pequeñas */
+    }
+}

@@ -1,17 +1,82 @@
-.logo{
-    width: auto;
-    height: 210px;
-    background-color:#8FBE92;
-    margin: 0;
-    position: relative;
-    bottom: 10px;
-    resize: 6px;
-    inline-size: 1363px;
-    margin-bottom: 500px;
+.back {
+  display: flex;
+  flex-direction: column; /* Cambiar a columna para centrar logo y texto */
+  align-items: center; /* Centrar horizontalmente */
+  justify-content: center; /* Centrar verticalmente */
+  padding: 20px;
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb); /* Degradado de fondo */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  border-radius: 10px; /* Bordes redondeados */
+  animation: fadeIn 0.8s ease-in-out; /* Animación de aparición */
 }
 
-.texto{
-    text-align: center;
-    font-size: 50px;
-    color: rgb(39, 39, 39);
+.logo {
+  animation: jump 1s infinite; /* Animación de salto */
+}
+
+.FONDO {
+  width: 100px; /* Ancho fijo del logo */
+  height: auto; /* Mantener proporciones */
+}
+
+h1 {
+  color: #2e7d32; /* Color verde */
+  text-align: center; /* Centrar texto */
+  margin: 5px 0; /* Espaciado superior e inferior */
+  animation: fadeInUp 1s ease-in-out; /* Animación de aparición para el texto */
+}
+
+.Titulo {
+  font-size: 2.5rem; /* Tamaño de fuente grande */
+  font-weight: bold; /* Negrita */
+  transition: color 0.3s; /* Transición de color */
+}
+
+.subTitulo {
+  font-size: 1.5rem; /* Tamaño de fuente más pequeño */
+  color: #555; /* Color gris */
+  transition: color 0.3s; /* Transición de color */
+}
+
+/* Efecto de hover para los títulos */
+.back:hover .Titulo {
+  color: #1b5e20; /* Color más oscuro al pasar el ratón */
+}
+
+.back:hover .subTitulo {
+  color: #333; /* Color más oscuro al pasar el ratón */
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Animación de salto */
+@keyframes jump {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px); /* Altura del salto */
+  }
+}
+
+/* Animación de aparición del texto hacia arriba */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }

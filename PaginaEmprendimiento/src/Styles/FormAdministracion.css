@@ -1,0 +1,188 @@
+.bajar {
+    background-color: #f7f9fc; /* Fondo claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 100vh; /* Asegurar que ocupe toda la altura de la pantalla */
+}
+
+.productosx {
+    background: white; /* Fondo blanco para el formulario */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 600px; /* Ancho máximo */
+    text-align: center;
+    animation: fadeIn 0.6s ease-in-out; /* Animación de aparición */
+}
+
+h2 {
+    color: #00796b; /* Color del título */
+    margin-bottom: 20px;
+    animation: slideIn 0.5s ease-in-out; /* Animación de deslizamiento */
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+    color: #555; /* Color del texto de la etiqueta */
+}
+
+input[type="text"], input[type="file"] {
+    width: calc(100% - 20px); /* Ancho completo menos padding */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Añadir transición para la sombra */
+}
+
+input[type="text"]:focus {
+    border-color: #00796b; /* Borde verde en foco */
+    outline: none; /* Sin borde de enfoque */
+    box-shadow: 0 0 5px rgba(0, 121, 107, 0.5); /* Sombra suave al enfocar */
+}
+
+.btnMover {
+    background-color: #00796b; /* Botón verde */
+    color: white; /* Texto blanco */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
+    margin: 5px 0;
+    animation: popIn 0.5s ease; /* Animación de aparición para botones */
+}
+
+.btnMover:hover {
+    background-color: #004d40; /* Botón más oscuro al pasar el ratón */
+    transform: scale(1.05); /* Efecto de aumento */
+}
+
+ul {
+    list-style: none; /* Sin viñetas */
+    padding: 0;
+}
+
+li {
+    background: #e0f7fa; /* Fondo ligero para cada producto */
+    border-radius: 5px;
+    padding: 15px;
+    font-size: x-large;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 450px;
+    margin-left: 50px;
+    animation: fadeInUp 0.5s ease-in-out; /* Animación de aparición para elementos de la lista */
+}
+
+.imagenes {
+    max-width: 100%; /* Asegurar que las imágenes no se desborden */
+    height: auto;
+    border-radius: 5px;
+}
+
+.control1 {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s; /* Transición suave para el borde */
+}
+
+.control1:focus {
+    border-color: #00796b; /* Borde verde en foco */
+    outline: none;
+}
+
+/* Animaciones */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px); /* Desplazarse hacia arriba */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Regresar a la posición original */
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-20px); /* Desplazarse hacia la izquierda */
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.8); /* Comenzar pequeño */
+        opacity: 0; /* Comenzar oculto */
+    }
+    to {
+        transform: scale(1); /* Regresar a la escala original */
+        opacity: 1; /* Volver a ser visible */
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px); /* Desplazarse hacia abajo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Regresar a la posición original */
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .productosx {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .cerrar,
+    .btnMover {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    .control1 {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .productosx {
+      padding: 10px;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  
+    .cerrar,
+    .btnMover {
+      font-size: 14px;
+    }
+  
+    .control1 {
+      padding: 8px;
+    }
+  }

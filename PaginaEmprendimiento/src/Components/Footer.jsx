@@ -1,6 +1,5 @@
 import React from 'react';
 import "../Styles/Footer.css";
-import { Link } from 'react-router-dom'
 import logo1 from "../Img/LogoF.png"
 import logo2 from "../Img/LogoC.png"
 import logo3 from "../Img/LogoU.png"
